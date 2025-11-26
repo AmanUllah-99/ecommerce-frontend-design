@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- MAIN: Cart + Summary -->
+  <div class="cart-row">
+
+    <!-- LEFT: Cart items -->
+    <section class="cart-box" id="cartBox">
+      <div class="cart-title">My cart (<span id="cartCount">3</span>)</div>
+
+      <!-- Item 1 -->
+      <div class="cart-item" data-price="78.99" data-id="1">
+        <div class="thumb"><img src="https://picsum.photos/seed/p1/200/200" alt=""></div>
+        <div class="item-content">
+          <div class="item-title">T-shirts with multiple colors, for men and lady</div>
+          <div class="item-meta">Size: medium, Color: blue, Material: Plastic</div>
+          <div class="seller">Seller: Artel Market</div>
+          <div class="item-actions">
+            <button class="btn-link remove-btn" data-remove>Remove</button>
+            <button class="btn-link secondary">Save for later</button>
+          </div>
+        </div>
+        <div class="item-price">
+          $<span class="price-text">78.99</span>
+          <div style="margin-top:10px">
+            <select class="qty-select" data-qty>
+              <option value="1">Qty: 1</option>
+              <option value="2">Qty: 2</option>
+              <option value="3">Qty: 3</option>
+              <option value="5">Qty: 5</option>
+              <option value="9" selected>Qty: 9</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="cart-item" data-price="39.00" data-id="2">
+        <div class="thumb"><img src="https://picsum.photos/seed/p2/200/200" alt=""></div>
+        <div class="item-content">
+          <div class="item-title">T-shirts with multiple colors, for men and lady</div>
+          <div class="item-meta">Size: medium, Color: blue, Material: Plastic</div>
+          <div class="seller">Seller: Best factory LLC</div>
+          <div class="item-actions">
+            <button class="btn-link remove-btn" data-remove>Remove</button>
+            <button class="btn-link secondary">Save for later</button>
+          </div>
+        </div>
+        <div class="item-price">
+          $<span class="price-text">39.00</span>
+          <div style="margin-top:10px">
+            <select class="qty-select" data-qty>
+              <option value="1">Qty: 1</option>
+              <option value="2">Qty: 2</option>
+              <option value="3" selected>Qty: 3</option>
+              <option value="5">Qty: 5</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="cart-item" data-price="170.50" data-id="3">
+        <div class="thumb"><img src="https://picsum.photos/seed/p3/200/200" alt=""></div>
+        <div class="item-content">
+          <div class="item-title">T-shirts with multiple colors, for men and lady</div>
+          <div class="item-meta">Size: medium, Color: blue, Material: Plastic</div>
+          <div class="seller">Seller: Artel Market</div>
+          <div class="item-actions">
+            <button class="btn-link remove-btn" data-remove>Remove</button>
+            <button class="btn-link secondary">Save for later</button>
+          </div>
+        </div>
+        <div class="item-price">
+          $<span class="price-text">170.50</span>
+          <div style="margin-top:10px">
+            <select class="qty-select" data-qty>
+              <option value="1" selected>Qty: 1</option>
+              <option value="2">Qty: 2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px">
+        <button class="btn-link secondary" id="backToShop">← Back to shop</button>
+        <button class="btn-link secondary" id="removeAll">Remove all</button>
+      </div>
+
+    </section>
+
+    <!-- RIGHT: Summary -->
+    <aside class="summary" id="summaryPanel">
+      <h3>Order summary</h3>
+
+      <div class="coupon">
+        <input id="couponInput" placeholder="Have a coupon? Add coupon" />
+        <button id="applyCoupon">Apply</button>
+      </div>
+
+      <div class="totals" id="totals">
+        <div class="row"><span>Subtotal:</span><span id="subtotal">$0.00</span></div>
+        <div class="row"><span>Discount:</span><span id="discount" style="color:#d23a3a">-$0.00</span></div>
+        <div class="row"><span>Tax:</span><span id="tax" style="color:#18a755">+$0.00</span></div>
+        <div class="row total"><span>Total:</span><span id="total">$0.00</span></div>
+      </div>
+
+      <button class="checkout-btn" id="checkout">Checkout</button>
+
+      <div class="payment-icons">
+        <img src="https://picsum.photos/seed/visa/80/24" alt="">
+        <img src="https://picsum.photos/seed/pp/80/24" alt="">
+        <img src="https://picsum.photos/seed/amex/80/24" alt="">
+      </div>
+    </aside>
+  </div>
+
+  <!-- INFO ROW -->
+  <div class="info-row">
+    <div class="info-item">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7v6c0 5 3 9 10 9s10-4 10-9V7L12 2z" stroke="#6da6a3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>Secure payment</div>
+      <small>Have you ever finally just</small>
+    </div>
+    <div class="info-item">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M21 10v7a2 2 0 0 1-2 2H9l-4 2V5a2 2 0 0 1 2-2h12" stroke="#6da6a3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>Customer support</div>
+      <small>Have you ever finally just</small>
+    </div>
+    <div class="info-item">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M3 12h18M3 17h18" stroke="#6da6a3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>Free delivery</div>
+      <small>Have you ever finally just</small>
+    </div>
+  </div>
+
+  <!-- SAVED FOR LATER -->
+  <section class="saved">
+    <h4>Saved for later</h4>
+    <div class="saved-grid">
+      <div class="product">
+        <div class="pimg"><img src="https://picsum.photos/seed/s1/400/360" alt=""></div>
+        <div class="pprice">$99.50</div>
+        <div class="pname">GoPro HERO6 4K Action Camera - Black</div>
+        <a class="pbtn">🛒 Move to cart</a>
+      </div>
+
+      <div class="product">
+        <div class="pimg"><img src="https://picsum.photos/seed/s2/400/360" alt=""></div>
+        <div class="pprice">$99.50</div>
+        <div class="pname">GoPro HERO6 4K Action Camera - Black</div>
+        <a class="pbtn">🛒 Move to cart</a>
+      </div>
+
+      <div class="product">
+        <div class="pimg"><img src="https://picsum.photos/seed/s3/400/360" alt=""></div>
+        <div class="pprice">$99.50</div>
+        <div class="pname">GoPro HERO6 4K Action Camera - Black</div>
+        <a class="pbtn">🛒 Move to cart</a>
+      </div>
+
+      <div class="product">
+        <div class="pimg"><img src="https://picsum.photos/seed/s4/400/360" alt=""></div>
+        <div class="pprice">$99.50</div>
+        <div class="pname">GoPro HERO6 4K Action Camera - Black</div>
+        <a class="pbtn">🛒 Move to cart</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO -->
+  <div class="promo">
+    <div class="text">Super discount on more than 100 USD<br><small style="font-weight:400;opacity:0.9">Have you ever finally just write dummy info</small></div>
+    <div class="cta">Shop now</div>
+  </div>
+
+</body>
+</html>
