@@ -82,7 +82,7 @@ body{background:#fff;}
 /* SECOND ROW NAV */
 .bottom-nav{
     width:100%;
-    background:#fff;
+    /* background:#fff; */
     padding:10px 25px;
     display:flex;
     justify-content:space-between;
