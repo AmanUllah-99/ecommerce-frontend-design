@@ -1,0 +1,437 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="container">
+            <div class="row align-items-center py-2">
+                <div class="col-md-3">
+                    <h2 class="brand-logo">Brand</h2>
+                </div>
+                <div class="col-md-6">
+                    <div class="search-container">
+                        <select class="category-dropdown">
+                            <option>All category</option>
+                            <option>Automobiles</option>
+                            <option>Clothes and wear</option>
+                            <option>Home interiors</option>
+                            <option>Computer and tech</option>
+                            <option>Tools, equipments</option>
+                            <option>Sports and outdoor</option>
+                            <option>Animal and pets</option>
+                            <option>Machinery tools</option>
+                            <option>More category</option>
+                        </select>
+                        <input type="text" class="search-input" placeholder="Search">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="header-icons">
+                        <div class="icon-item">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Message</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fas fa-gift"></i>
+                            <span>Orders</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>My cart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-links">
+                <a href="#" class="nav-link">Automobiles</a>
+                <a href="#" class="nav-link">Clothes and wear</a>
+                <a href="#" class="nav-link">Home interiors</a>
+                <a href="#" class="nav-link">Computer and tech</a>
+                <a href="#" class="nav-link">Tools, equipments</a>
+                <a href="#" class="nav-link">Sports and outdoor</a>
+                <a href="#" class="nav-link">Animal and pets</a>
+                <a href="#" class="nav-link">Machinery tools</a>
+                <a href="#" class="nav-link">More category</a>
+                <div class="nav-highlight">
+                    <span class="highlight-text">Least trending Electronic items</span>
+                    <a href="#" class="learn-more">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout Sections -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <!-- Left Sidebar -->
+                <div class="col-md-3 left-sidebar">
+                    <!-- User Welcome Section -->
+                    <div class="sidebar-section user-welcome">
+                        <h4>HI, user let's get started</h4>
+                        <div class="auth-buttons">
+                            <button class="btn btn-join">Join now</button>
+                            <button class="btn btn-login">Log in</button>
+                        </div>
+                    </div>
+
+                    <!-- Discount Offer -->
+                    <div class="sidebar-section discount-offer">
+                        <h5>Get US $10 off with a new supplier</h5>
+                        <p>Send quotes with supplier preferences</p>
+                        <button class="btn btn-send-quote">Send Quote</button>
+                    </div>
+
+                    <!-- Deals and Offers -->
+                    <div class="sidebar-section deals-offers">
+                        <h5>Deals and offers</h5>
+                        <p class="category-name">Electronic equipments</p>
+                        <div class="timer">
+                            <div class="time-unit">
+                                <span class="time-value">04</span>
+                                <span class="time-label">Days</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value">23</span>
+                                <span class="time-label">Hour</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value">59</span>
+                                <span class="time-label">Min</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value">46</span>
+                                <span class="time-label">Sec</span>
+                            </div>
+                        </div>
+                        <div class="deal-items">
+                            <div class="deal-item">
+                                <div class="deal-icon">⌚</div>
+                                <span class="deal-name">Smart watches</span>
+                            </div>
+                            <div class="deal-item">
+                                <div class="deal-icon">💻</div>
+                                <span class="deal-name">Laptops</span>
+                            </div>
+                            <div class="deal-item">
+                                <div class="deal-icon">📷</div>
+                                <span class="deal-name">GoPro cameras</span>
+                            </div>
+                            <div class="deal-item">
+                                <div class="deal-icon">🎧</div>
+                                <span class="deal-name">Headphones</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Area -->
+                <div class="col-md-9 main-area">
+                    <!-- Categories Section -->
+                    <section class="categories-section">
+                        <div class="category-banner">
+                            <div class="category-card">
+                                <h4>Home and outdoor</h4>
+                                <button class="btn-source">Source now</button>
+                            </div>
+                            <div class="category-card">
+                                <h4>Consumer electronics</h4>
+                                <button class="btn-source">Source now</button>
+                            </div>
+                        </div>
+
+                        <!-- Products Grid -->
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <h5>Soft chairs</h5>
+                                <p class="price">From USD 19</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Smart watches</h5>
+                                <p class="price">From USD 19</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Kitchen mixer</h5>
+                                <p class="price">From USD 100</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Blenders</h5>
+                                <p class="price">From USD 39</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Home appliance</h5>
+                                <p class="price">From USD 19</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Smart watches</h5>
+                                <p class="price">From USD 19</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Sofa & chair</h5>
+                                <p class="price">From USD 19</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Smart watches</h5>
+                                <p class="price">From USD 19</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Kitchen dishes</h5>
+                                <p class="price">From USD 19</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Smart watches</h5>
+                                <p class="price">From USD 19</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Home appliance</h5>
+                                <p class="price">From USD 19</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Home appliance</h5>
+                                <p class="price">From USD 19</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Coffee maker</h5>
+                                <p class="price">From USD 10</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Smart watches</h5>
+                                <p class="price">From USD 19</p>
+                            </div>
+                            <div class="product-card">
+                                <h5>Coffee maker</h5>
+                                <p class="price">From USD 10</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Supplier Request Section -->
+    <section class="supplier-request">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>An easy way to send requests to all suppliers</h2>
+                    <p class="request-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    <button class="btn btn-primary btn-send-quote-large">Send quote to suppliers</button>
+                </div>
+                <div class="col-md-6">
+                    <div class="request-form">
+                        <div class="form-group">
+                            <label>What item you need?</label>
+                            <input type="text" placeholder="Enter item name">
+                        </div>
+                        <div class="form-group">
+                            <label>Type more details</label>
+                            <textarea placeholder="Additional details"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <div class="quantity-input">
+                                <input type="number" placeholder="0">
+                                <span class="unit">Pcs</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-send-inquiry">Send inquiry</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra Services Section -->
+    <section class="extra-services">
+        <div class="container">
+            <h2 class="section-title">Our extra services</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="services-grid">
+                        <div class="service-item">
+                            <div class="service-icon">🏭</div>
+                            <div class="service-content">
+                                <h5>Source from Industry Hubs</h5>
+                                <p>Customize Your Products</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">🚢</div>
+                            <div class="service-content">
+                                <h5>Fast, reliable shipping by ocean or air</h5>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">🔍</div>
+                            <div class="service-content">
+                                <h5>Product monitoring and inspection</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="region-title">Suppliers by region</h5>
+                    <div class="region-list">
+                        <div class="region-column">
+                            <div class="region-item">
+                                <strong>Arabic Emirates</strong>
+                                <span>shipname.ae</span>
+                            </div>
+                            <div class="region-item">
+                                <strong>Australia</strong>
+                                <span>shipname.ae</span>
+                            </div>
+                            <div class="region-item">
+                                <strong>United States</strong>
+                                <span>shipname.ae</span>
+                            </div>
+                            <div class="region-item">
+                                <strong>Russia</strong>
+                                <span>shipname.eu</span>
+                            </div>
+                            <div class="region-item">
+                                <strong>Italy</strong>
+                                <span>shipname.it</span>
+                            </div>
+                        </div>
+                        <div class="region-column">
+                            <div class="region-item">
+                                <strong>Demark</strong>
+                                <span>demark.com.dk</span>
+                            </div>
+                            <div class="region-item">
+                                <strong>France</strong>
+                                <span>shipname.com.fr</span>
+                            </div>
+                            <div class="region-item">
+                                <strong>Arabic Emirates</strong>
+                                <span>shipname.ae</span>
+                            </div>
+                            <div class="region-item">
+                                <strong>China</strong>
+                                <span>shipname.ae</span>
+                            </div>
+                            <div class="region-item">
+                                <strong>Great Britain</strong>
+                                <span>shipname.co.uk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Subscribe on our newsletter</h3>
+                <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button class="btn-subscribe">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Brand</h3>
+                    <p>Best information about the company dies here but now lorem ipsum is</p>
+                    <div class="social-links">
+                        <!-- Social icons would go here -->
+                    </div>
+                </div>
+                
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h5>About</h5>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Find store</a></li>
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h5>Partnership</h5>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Find store</a></li>
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h5>Information</h5>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Money Refund</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h5>For users</h5>
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">My Orders</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h5>Get app</h5>
+                        <div class="app-buttons">
+                            <button class="app-btn">
+                                <span class="app-icon">📱</span>
+                                <span>Available at the AppStore</span>
+                            </button>
+                            <button class="app-btn">
+                                <span class="app-icon">📱</span>
+                                <span>Available at Google Play</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ecommerce.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

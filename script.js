@@ -1,36 +1,97 @@
-// ===== Load header and footer dynamically =====
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('header.html')
-        .then(res => res.text())
-        .then(data => { document.getElementById('header').innerHTML = data; });
+ // Timer Countdown
+function startTimer() {
+    const daysElement = document.querySelector('.time-unit:nth-child(1) .time-value');
+    const hoursElement = document.querySelector('.time-unit:nth-child(2) .time-value');
+    const minutesElement = document.querySelector('.time-unit:nth-child(3) .time-value');
+    const secondsElement = document.querySelector('.time-unit:nth-child(4) .time-value');
 
-    fetch('footer.html')
-        .then(res => res.text())
-        .then(data => { document.getElementById('footer').innerHTML = data; });
+    let days = 4;
+    let hours = 23;
+    let minutes = 59;
+    let seconds = 46;
 
-    // ===== Timer =====
-    const daysEl = document.querySelector('.timer-item:nth-child(1) .timer-value');
-    const hoursEl = document.querySelector('.timer-item:nth-child(2) .timer-value');
-    const minutesEl = document.querySelector('.timer-item:nth-child(3) .timer-value');
-    const secondsEl = document.querySelector('.timer-item:nth-child(4) .timer-value');
+    const timer = setInterval(() => {
+        seconds--;
+        
+        if (seconds < 0) {
+            seconds = 59;
+            minutes--;
+            
+            if (minutes < 0) {
+                minutes = 59;
+                hours--;
+                
+                if (hours < 0) {
+                    hours = 23;
+                    days--;
+                    
+                    if (days < 0) {
+                        clearInterval(timer);
+                        return;
+                    }
+                }
+            }
+        }
 
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 4);
+        daysElement.textContent = days.toString().padStart(2, '0');
+        hoursElement.textContent = hours.toString().padStart(2, '0');
+        minutesElement.textContent = minutes.toString().padStart(2, '0');
+        secondsElement.textContent = seconds.toString().padStart(2, '0');
+    }, 1000);
+}
 
-    function updateTimer() {
-        const now = new Date();
-        const diff = targetDate - now;
-        if (diff <= 0) { daysEl.textContent = hoursEl.textContent = minutesEl.textContent = secondsEl.textContent = '00'; return; }
-        const d = Math.floor(diff / (1000*60*60*24));
-        const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-        const m = Math.floor((diff % (1000*60*60)) / (1000*60));
-        const s = Math.floor((diff % (1000*60)) / 1000);
-        daysEl.textContent = d.toString().padStart(2,'0');
-        hoursEl.textContent = h.toString().padStart(2,'0');
-        minutesEl.textContent = m.toString().padStart(2,'0');
-        secondsEl.textContent = s.toString().padStart(2,'0');
+// Form Handling
+function handleForms() {
+    // Supplier inquiry form
+    const inquiryForm = document.querySelector('.request-form');
+    if (inquiryForm) {
+        inquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Inquiry sent successfully!');
+            this.reset();
+        });
     }
 
-    updateTimer();
-    setInterval(updateTimer, 1000);
+    // Newsletter form
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (email) {
+                alert('Thank you for subscribing!');
+                this.reset();
+            }
+        });
+    }
+}
+
+// Initialize all functionality
+document.addEventListener('DOMContentLoaded', function() {
+    startTimer();
+    handleForms();
+    
+    // Add click handlers for buttons
+    const buttons = document.querySelectorAll('.btn-join, .btn-login, .btn-send-quote, .btn-source');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const buttonText = this.textContent.trim();
+            alert(`${buttonText} clicked!`);
+        });
+    });
 });
+
+// Product interaction
+function initProductInteractions() {
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const productName = this.querySelector('h5').textContent;
+            const price = this.querySelector('.price').textContent;
+            alert(`Selected: ${productName} - ${price}`);
+        });
+    });
+}
+
+// Initialize product interactions
+document.addEventListener('DOMContentLoaded', initProductInteractions);
