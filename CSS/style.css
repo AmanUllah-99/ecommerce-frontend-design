@@ -6,7 +6,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
+   a{
+    text-decoration: none;
+    color: inherit;
+   
+   }  
+        
+   }  
+/* =========================================================
+   BODY STYLES
 
 body {
     background: #fff;
@@ -34,7 +42,7 @@ body {
 }
 
 .logo img {
-    width: 100px;
+    width: 120px;
     height: 50px;
     gap: 100px;
 }

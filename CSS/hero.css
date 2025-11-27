@@ -1,0 +1,163 @@
+
+/* =========================================================
+   MAIN SECTION LAYOUT
+========================================================= */
+.main-section {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* =========================================================
+   LEFT SIDEBAR / CATEGORY MENU
+========================================================= */
+.category-sidebar {
+    width: 220px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.category-sidebar ul {
+    list-style: none;
+    line-height: 32px;
+}
+
+.category-sidebar li {
+    color: #4b5563;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.category-sidebar li:hover {
+    color: #2563eb;
+}
+
+/* =========================================================
+   HERO BANNER
+========================================================= */
+.hero-banner {
+    flex: 1;
+    background: #e6f7f5;
+    border-radius: 12px;
+    border: 1px solid #e3e3e3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.hero-text h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.hero-text h1 {
+    font-size: 32px;
+    margin: 5px 0 20px;
+}
+
+.learn-btn {
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.hero-banner img {
+    width: 380px;
+    border-radius: 10px;
+}
+
+/* =========================================================
+   RIGHT BOX (LOGIN / OFFERS)
+========================================================= */
+.hero-right-box {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.user-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #dbe1e5;
+}
+
+.user-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    background: #e5e7eb;
+    border-radius: 50%;
+}
+
+.user-info p {
+    color: #374151;
+    font-size: 15px;
+}
+
+.user-info span {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.blue-btn {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 15px;
+    background: #1e73ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.white-btn {
+    width: 100%;
+    padding: 10px 0;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* OFFER BOXES */
+.offer {
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+}
+
+.offer h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.offer p {
+    font-size: 14px;
+}
+
+.orange {
+    background: #f57c00;
+}
+
+.green {
+    background: #009688;
+}
+

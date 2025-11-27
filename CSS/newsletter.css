@@ -1,0 +1,61 @@
+
+/* =========================================================
+   NEWSLETTER SECTION
+========================================================= */
+
+.newsletter {
+  background: #e7e9ee;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.newsletter h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.newsletter-subtext {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.newsletter-form {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.input-box {
+  background: white;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  width: 350px;
+  border: 1px solid #ddd;
+}
+
+.input-box img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+}
+
+.newsletter button {
+  background: #3d7cff;
+  color: white;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+}

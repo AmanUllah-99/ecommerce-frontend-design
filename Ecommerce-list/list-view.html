@@ -1,0 +1,218 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ecommerce Clone</title>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+body{background:#f5f6f8;color:#333;}
+header{width:100%;background:#fff;border-bottom:1px solid #e5e5e5;padding:15px 0;}
+.container{width:90%;margin:auto;max-width:1450px;}
+.topbar{display:flex;align-items:center;justify-content:space-between;}
+.top-left{display:flex;align-items:center;gap:20px;}
+.top-left .logo{font-size:22px;font-weight:700;color:#2d7cf6;display:flex;align-items:center;gap:6px;}
+.search{display:flex;gap:0;}
+.search input{padding:10px 15px;width:300px;border:1px solid #dcdcdc;border-radius:6px 0 0 6px;}
+.search select{padding:10px;border:1px solid #dcdcdc;border-left:none;}
+.search button{padding:10px 20px;background:#2d7cf6;border:none;color:white;border-radius:0 6px 6px 0;cursor:pointer;}
+.top-right{display:flex;align-items:center;gap:25px;font-size:14px;}
+/* NAV */
+nav{width:100%;background:white;border-bottom:1px solid #e1e1e1;margin-top:5px;}
+nav ul{display:flex;gap:25px;padding:12px 0;list-style:none;font-size:14px;color:#444;}
+/* Layout */
+.main{display:flex;gap:25px;margin:30px 0;}
+.sidebar{width:260px;background:#fff;padding:20px;border-radius:8px;border:1px solid #e3e3e3;height:min-content;}
+.sidebar h3{font-size:16px;margin-bottom:10px;}
+.filter-box{margin-bottom:25px;}
+.filter-box label{display:flex;align-items:center;margin:6px 0;font-size:14px;gap:8px;}
+.filter-box a{color:#2d7cf6;font-size:14px;}
+/* Product List */
+.products{flex:1;}
+.products-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;}
+.products-header select{padding:8px;border:1px solid #ccc;border-radius:6px;}
+.product-card{display:flex;background:#fff;border-radius:8px;border:1px solid #e3e3e3;padding:18px;margin-bottom:18px;gap:20px;}
+.product-card img{width:180px;height:180px;object-fit:contain;border-radius:8px;border:1px solid #eee;}
+.product-info h2{font-size:18px;margin-bottom:5px;}
+.price{font-size:22px;font-weight:700;margin:8px 0;color:#222;}
+.old-price{text-decoration:line-through;color:#999;margin-left:8px;font-size:14px;}
+.rating{color:#f7a400;font-size:14px;margin:5px 0;}
+.ship{color:#21a540;font-weight:600;font-size:14px;}
+.view-btn{color:#2d7cf6;font-size:14px;margin-top:10px;display:inline-block;}
+.like{margin-left:auto;font-size:20px;color:#2d7cf6;cursor:pointer;}
+/* Footer */
+footer{background:#fff;border-top:1px solid #e3e3e3;padding:40px 0;margin-top:50px;}
+.footer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:30px;font-size:14px;}
+.footer-grid h4{margin-bottom:12px;font-size:15px;}
+.newsletter{background:#fff;padding:20px;border:1px solid #e1e1e1;border-radius:8px;margin:50px 0;text-align:center;}
+.newsletter input{padding:10px;width:260px;border:1px solid #ccc;border-radius:6px;margin-right:10px;}
+.newsletter button{padding:10px 20px;background:#2d7cf6;border:none;color:white;border-radius:6px;cursor:pointer;}
+/* Responsive */
+@media(max-width:1000px){.main{flex-direction:column;}.sidebar{width:100%;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container topbar">
+    <div class="top-left">
+      <div class="logo"><i class="ri-store-2-line"></i> Brand</div>
+      <div class="search">
+        <input type="text" placeholder="Search" />
+        <select><option>All category</option></select>
+        <button>Search</button>
+      </div>
+    </div>
+    <div class="top-right">
+      <span>Profile</span>
+      <span>Messages</span>
+      <span>Orders</span>
+      <span>My cart</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <div class="container">
+    <ul>
+      <li>All category</li>
+      <li>Hot offers</li>
+      <li>Gift boxes</li>
+      <li>Projects</li>
+      <li>Menu item</li>
+      <li>Help</li>
+    </ul>
+  </div>
+</nav>
+<div class="container main">
+  <aside class="sidebar">
+    <div class="filter-box">
+      <h3>Category</h3>
+      <label><input type="checkbox"> Mobile accessory</label>
+      <label><input type="checkbox"> Electronics</label>
+      <label><input type="checkbox"> Smartphones</label>
+      <a href="#">See all</a>
+    </div>
+    <div class="filter-box">
+      <h3>Brands</h3>
+      <label><input type="checkbox"> Samsung</label>
+      <label><input type="checkbox"> Apple</label>
+      <label><input type="checkbox"> Huawei</label>
+      <a href="#">See all</a>
+    </div>
+       <div class="filter-box">
+      <h3>Category</h3>
+      <label><input type="checkbox"> Cloth</label>
+      <label><input type="checkbox"> SmartWatch</label>
+      <label><input type="checkbox"> Tablet</label>
+      <a href="#">See all</a>
+    </div>
+    <div class="filter-box">
+      <h3>Brands</h3>
+      <label><input type="checkbox"> Wears</label>
+      <label><input type="checkbox"> PPet</label>
+      <label><input type="checkbox"> Laptop</label>
+      <a href="#">See all</a>
+    </div>
+  </aside>
+  <section class="products">
+    <div class="products-header">
+      <div>12,911 items in <b>Mobile accessory</b></div>
+      <select><option>Featured</option></select>
+    </div>
+
+    <!-- PRODUCT SAMPLE (Repeated) -->
+    <div class="product-card">
+      <img src="../image/p1.png" />
+      <div class="product-info">
+        <h2>Canon Camera EOS 2000, Black 10x zoom</h2>
+        <div class="price">$998.00 <span class="old-price">$1128.00</span></div>
+        <div class="rating">★★★★☆ 154 orders • <span class="ship">Free Shipping</span></div>
+        <a class="view-btn" href="#">View details</a>
+      </div>
+      <div class="like"><i class="ri-heart-line"></i></div>
+    </div>
+      <!-- PRODUCT SAMPLE (Repeated) -->
+    <div class="product-card">
+      <img src="../image/p2.png" />
+      <div class="product-info">
+        <h2>Canon Camera EOS 2000, Black 10x zoom</h2>
+        <div class="price">$998.00 <span class="old-price">$1128.00</span></div>
+        <div class="rating">★★★★☆ 154 orders • <span class="ship">Free Shipping</span></div>
+        <a class="view-btn" href="#">View details</a>
+      </div>
+      <div class="like"><i class="ri-heart-line"></i></div>
+    </div>
+      <!-- PRODUCT SAMPLE (Repeated) -->
+    <div class="product-card">
+      <img src="../image/shoe1.png" />
+      <div class="product-info">
+        <h2>Canon Camera EOS 2000, Black 10x zoom</h2>
+        <div class="price">$998.00 <span class="old-price">$1128.00</span></div>
+        <div class="rating">★★★★☆ 154 orders • <span class="ship">Free Shipping</span></div>
+        <a class="view-btn" href="#">View details</a>
+      </div>
+      <div class="like"><i class="ri-heart-line"></i></div>
+    </div>
+      <!-- PRODUCT SAMPLE (Repeated) -->
+    <div class="product-card">
+      <img src="../image/w2.png" />
+      <div class="product-info">
+        <h2>Canon Camera EOS 2000, Black 10x zoom</h2>
+        <div class="price">$998.00 <span class="old-price">$1128.00</span></div>
+        <div class="rating">★★★★☆ 154 orders • <span class="ship">Free Shipping</span></div>
+        <a class="view-btn" href="#">View details</a>
+      </div>
+      <div class="like"><i class="ri-heart-line"></i></div>
+    </div>  <!-- PRODUCT SAMPLE (Repeated) -->
+    <div class="product-card">
+      <img src="../image/w2.png" />
+      <div class="product-info">
+        <h2>Canon Camera EOS 2000, Black 10x zoom</h2>
+        <div class="price">$998.00 <span class="old-price">$1128.00</span></div>
+        <div class="rating">★★★★☆ 154 orders • <span class="ship">Free Shipping</span></div>
+        <a class="view-btn" href="#">View details</a>
+      </div>
+      <div class="like"><i class="ri-heart-line"></i></div>
+    </div>
+      <!-- PRODUCT SAMPLE (Repeated) -->
+    <div class="product-card">
+      <img src="../image/w2.png" />
+      <div class="product-info">
+        <h2>Canon Camera EOS 2000, Black 10x zoom</h2>
+        <div class="price">$998.00 <span class="old-price">$1128.00</span></div>
+        <div class="rating">★★★★☆ 154 orders • <span class="ship">Free Shipping</span></div>
+        <a class="view-btn" href="#">View details</a>
+      </div>
+      <div class="like"><i class="ri-heart-line"></i></div>
+    </div>
+
+    <!-- (More cards can be duplicated as needed) -->
+
+  </section>
+</div>
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4>Brand</h4>
+      <p>Best information about the company goes here but now lorem ipsum is</p>
+    </div>
+    <div>
+      <h4>About</h4>
+      <p>About Us</p><p>Find store</p><p>Categories</p>
+    </div>
+    <div>
+      <h4>Partnership</h4>
+      <p>About Us</p><p>Find store</p><p>Categories</p>
+    </div>
+    <div>
+      <h4>Information</h4>
+      <p>Help Center</p><p>Money Refund</p><p>Shipping</p>
+    </div>
+    <div>
+      <h4>For users</h4>
+      <p>Login</p><p>Register</p><p>Settings</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

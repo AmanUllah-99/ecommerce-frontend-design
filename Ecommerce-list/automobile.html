@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerces-automobile</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/footer-style.css">
+
+    <style>
+      /* * {margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+body {background:#f5f6fa;} */
+
+
+.auto-wrapper {
+width:100%;max-width:1300px;margin:auto;padding:30px 20px;
+}
+
+
+.auto-header {
+display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;
+}
+.auto-header h2 {
+font-size:28px;font-weight:700;color:#222;
+}
+.auto-filters {
+display:flex;gap:12px;
+}
+.auto-filters select, .auto-filters input {
+padding:8px 12px;border:1px solid #ccc;border-radius:6px;background:white;
+}
+
+
+.car-grid {
+display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:20px;
+}
+
+
+.car-card {
+background:white;border-radius:14px;overflow:hidden;box-shadow:0 3px 8px rgba(0,0,0,0.08);
+transition:0.2s;
+}
+.car-card:hover {
+transform:translateY(-4px);
+}
+.car-img {
+width:100%;height:180px;object-fit:cover;
+}
+.car-info {padding:15px;}
+.car-info h3 {font-size:18px;color:#222;margin-bottom:6px;}
+.car-tags {
+display:flex;gap:8px;margin:8px 0;flex-wrap:wrap;
+}
+.tag {
+background:#eef2ff;color:#3f51b5;font-size:12px;padding:4px 8px;border-radius:6px;
+}
+.car-price {font-size:20px;font-weight:bold;color:#27ae60;margin-top:10px;}
+
+
+@media(max-width:600px){
+.auto-header {flex-direction:column;align-items:flex-start;gap:10px;}
+.auto-filters {flex-wrap:wrap;width:100%;}
+}
+
+</style>
+
+   
+</head>
+<body><!-- ======= TOP NAVBAR ======= -->
+<header class="top-nav">
+    <div class="nav-left">
+        <div class="logo">
+            <img src="../image/logo.png" alt="Brand Logo">
+            <!-- <span>Brand</span> -->
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+            <select>
+                <option>All category</option>
+            </select>
+            <button>Search</button>
+        </div>
+    </div>
+
+    <div class="nav-right">
+        <div class="nav-item">
+            <i class="ri-user-line"></i>
+            Profile
+        </div>
+        <div class="nav-item">
+            <i class="ri-chat-3-line"></i>
+            Message
+        </div>
+        <div class="nav-item">
+            <i class="ri-heart-line"></i>
+            Orders
+        </div>
+        <div class="nav-item">
+            <i class="ri-shopping-cart-line"></i>
+            <a href="Cart/mycart.html">My cart</a>
+        </div>
+    </div>
+</header>
+ 
+   
+ 
+
+
+<!-- Automobile Section Start -->
+ <section class="auto-wrapper">
+
+
+<div class="auto-header">
+<h2>Automobile Deals</h2>
+<div class="auto-filters">
+<select>
+<option>All Types</option>
+<option>Cars</option>
+<option>Bikes</option>
+<option>EV Vehicles</option>
+</select>
+<select>
+<option>Brand</option>
+<option>Toyota</option>
+<option>Honda</option>
+<option>Kia</option>
+</select>
+<input type="text" placeholder="Search model..." />
+</div>
+</div>
+
+
+<div class="car-grid">
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1502877338535-766e1452684a" />
+<div class="car-info">
+<h3>Toyota Corolla 2021</h3>
+<div class="car-tags">
+<span class="tag">Automatic</span>
+<span class="tag">Petrol</span>
+<span class="tag">18k km</span>
+</div>
+<div class="car-price">$18,500</div>
+</div>
+</div>
+
+
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c" />
+<div class="car-info">
+<h3>Honda Civic Turbo</h3>
+<div class="car-tags">
+<span class="tag">Automatic</span>
+<span class="tag">Turbo</span>
+<span class="tag">12k km</span>
+</div>
+<div class="car-price">$23,900</div>
+</div>
+</div>
+
+
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" />
+<div class="car-info">
+<h3>Ford Mustang GT</h3>
+<div class="car-tags">
+<span class="tag">Manual</span>
+<span class="tag">V8</span>
+</div>
+<div class="car-price">$56,200</div>
+</div>
+</div>
+
+
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf" />
+<div class="car-info">
+<h3>Tesla Model S</h3>
+<div class="car-tags">
+<span class="tag">Electric</span>
+<span class="tag">AutoPilot</span>
+</div>
+<div class="car-price">$72,400</div>
+</div>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- Automobile Section Start -->
+ <section class="auto-wrapper">
+
+
+
+<div class="car-grid">
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1502877338535-766e1452684a" />
+<div class="car-info">
+<h3>Toyota Corolla 2021</h3>
+<div class="car-tags">
+<span class="tag">Automatic</span>
+<span class="tag">Petrol</span>
+<span class="tag">18k km</span>
+</div>
+<div class="car-price">$18,500</div>
+</div>
+</div>
+
+
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c" />
+<div class="car-info">
+<h3>Honda Civic Turbo</h3>
+<div class="car-tags">
+<span class="tag">Automatic</span>
+<span class="tag">Turbo</span>
+<span class="tag">12k km</span>
+</div>
+<div class="car-price">$23,900</div>
+</div>
+</div>
+
+
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" />
+<div class="car-info">
+<h3>Ford Mustang GT</h3>
+<div class="car-tags">
+<span class="tag">Manual</span>
+<span class="tag">V8</span>
+</div>
+<div class="car-price">$56,200</div>
+</div>
+</div>
+
+
+<div class="car-card">
+<img class="car-img" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf" />
+<div class="car-info">
+<h3>Tesla Model S</h3>
+<div class="car-tags">
+<span class="tag">Electric</span>
+<span class="tag">AutoPilot</span>
+</div>
+<div class="car-price">$72,400</div>
+</div>
+</div>
+
+
+</div>
+
+
+</section>
+<!-- Automobile Section End -->
+
+
+<!-- footer -->
+ <!-- FOOTER START -->
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <!-- BRAND + DESCRIPTION -->
+        <div class="footer-brand">
+            <div class="brand-logo">
+                <img src="../image/logo.png" alt="brand">
+                
+            </div>
+
+            <p class="brand-text">
+                Best information about the company gies here but <br>
+                now lorem ipsum is
+            </p>
+
+            <div class="social-icons" aria-label="Social links">
+                <a href="#" aria-label="Facebook" class="social-link"><i class="ri-facebook-fill"></i></a>
+                <a href="#" aria-label="Twitter" class="social-link"><i class="ri-twitter-fill"></i></a>
+                <a href="#" aria-label="LinkedIn" class="social-link"><i class="ri-linkedin-box-fill"></i></a>
+                <a href="#" aria-label="Instagram" class="social-link"><i class="ri-instagram-fill"></i></a>
+                <a href="#" aria-label="YouTube" class="social-link"><i class="ri-youtube-fill"></i></a>
+            </div>
+        </div>
+
+        <!-- LINKS COLUMN 1 -->
+        <div class="footer-col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Find store</a>
+            <a href="#">Categories</a>
+            <a href="#">Blogs</a>
+        </div>
+
+        <!-- LINKS COLUMN 2 -->
+        <div class="footer-col">
+            <h4>Partnership</h4>
+            <a href="#">About Us</a>
+            <a href="#">Find store</a>
+            <a href="#">Categories</a>
+            <a href="#">Blogs</a>
+        </div>
+
+        <!-- LINKS COLUMN 3 -->
+        <div class="footer-col">
+            <h4>Information</h4>
+            <a href="#">Help Center</a>
+            <a href="#">Money Refund</a>
+            <a href="#">Shipping</a>
+            <a href="#">Contact us</a>
+        </div>
+
+        <!-- LINKS COLUMN 4 -->
+        <div class="footer-col">
+            <h4>For users</h4>
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+            <a href="#">Settings</a>
+            <a href="#">My Orders</a>
+        </div>
+
+        <!-- APP DOWNLOAD -->
+        <div class="footer-app">
+            <h4>Get app</h4>
+            <a href="#" class="app-btn app-store" aria-label="Download on Google Play">
+                <i class="ri-google-play-fill"></i>
+                <span>Google Play</span>
+            </a>
+            <a href="#" class="app-btn app-store" aria-label="Download on the App Store">
+                <i class="ri-apple-fill"></i>
+                <span>App Store</span>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2023 Ecommerce.</p>
+
+        <div class="footer-lang">
+            <button class="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
+                <img src="../flag/untiedstated.jpg" class="flag" alt="United States flag">
+                <span>English</span>
+                <i class="ri-arrow-down-s-line"></i>
+            </button>
+
+           
+        </div>
+    </div>
+
+</footer>
+<!-- FOOTER END -->
+
+</body>
+</html>

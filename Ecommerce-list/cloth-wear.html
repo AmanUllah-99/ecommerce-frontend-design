@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clothing & Wears</title>
+<link rel="stylesheet" href="../CSS/style.css">
+<style>
+  * {margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+  body {background:#f5f6fa;}
+
+  .wrapper {max-width:1300px;margin:auto;padding:30px 20px;}
+
+  .header {
+    display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;
+  }
+  .header h2 {font-size:28px;color:#222;font-weight:700;}
+
+  .filters {display:flex;gap:12px;flex-wrap:wrap;}
+  .filters select, .filters input {
+    padding:8px 12px;border:1px solid #ccc;border-radius:6px;background:#fff;
+  }
+
+  .grid {display:grid;grid-template-columns:repeat(auto-fit, minmax(260px,1fr));gap:22px;}
+
+  .item {
+    background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 8px rgba(0,0,0,0.08);
+    transition:0.2s;
+  }
+  .item:hover {transform:translateY(-4px);}  
+  .item img {width:100%;height:300px;object-fit:cover;}
+
+  .content {padding:15px;}
+  .title {font-size:18px;font-weight:600;margin-bottom:8px;color:#222;}
+
+  .tags {display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;}
+  .tag {padding:4px 8px;background:#f0f3ff;border-radius:6px;font-size:12px;color:#3f51b5;}
+
+  .price {font-size:20px;color:#27ae60;font-weight:bold;margin-top:5px;}
+
+  @media(max-width:600px){
+    .header {flex-direction:column;align-items:flex-start;gap:12px;}
+  }
+</style>
+</head>
+<body>
+
+    <!-- ======= TOP NAVBAR ======= -->
+<header class="top-nav">
+    <div class="nav-left">
+        <div class="logo">
+            <img src="../image/logo.png" alt="Brand Logo">
+            <!-- <span>Brand</span> -->
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+            <select>
+                <option>All category</option>
+            </select>
+            <button>Search</button>
+        </div>
+    </div>
+
+    <div class="nav-right">
+        <div class="nav-item">
+            <i class="ri-user-line"></i>
+            Profile
+        </div>
+        <div class="nav-item">
+            <i class="ri-chat-3-line"></i>
+            Message
+        </div>
+        <div class="nav-item">
+            <i class="ri-heart-line"></i>
+            Orders
+        </div>
+        <div class="nav-item">
+            <i class="ri-shopping-cart-line"></i>
+            <a href="../Cart/mycart.html">My cart</a>
+        </div>
+    </div>
+</header>
+
+<!-- clothing and wear -->
+
+<section class="wrapper">
+  <div class="header">
+    <h2>Clothing & Wears</h2>
+    <div class="filters">
+      <select>
+        <option>All Categories</option>
+        <option>Men</option>
+        <option>Women</option>
+        <option>Kids</option>
+      </select>
+      <select>
+        <option>Size</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+      </select>
+      <select>
+        <option>Style</option>
+        <option>Casual</option>
+        <option>Formal</option>
+        <option>Sports</option>
+      </select>
+      <input type="text" placeholder="Search clothing...">
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" />
+      <div class="content">
+        <div class="title">Cotton Summer Shirt</div>
+        <div class="tags">
+          <span class="tag">Men</span>
+          <span class="tag">Casual</span>
+          <span class="tag">Cotton</span>
+        </div>
+        <div class="price">$29</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1542060748-10c28b62716d" />
+      <div class="content">
+        <div class="title">Stylish Denim Jacket</div>
+        <div class="tags">
+          <span class="tag">Women</span>
+          <span class="tag">Denim</span>
+          <span class="tag">Winter</span>
+        </div>
+        <div class="price">$48</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" />
+      <div class="content">
+        <div class="title">Kids Hoodie</div>
+        <div class="tags">
+          <span class="tag">Kids</span>
+          <span class="tag">Hoodie</span>
+        </div>
+        <div class="price">$22</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" />
+      <div class="content">
+        <div class="title">Sports Tracksuit</div>
+        <div class="tags">
+          <span class="tag">Men</span>
+          <span class="tag">Sports</span>
+        </div>
+        <div class="price">$35</div>
+      </div>
+    </div>
+
+  </div>
+  
+
+</section>
+
+
+<section class="wrapper">
+  
+
+  <div class="grid">
+       <div class="item">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" />
+      <div class="content">
+        <div class="title">Cotton Summer Shirt</div>
+        <div class="tags">
+          <span class="tag">Men</span>
+          <span class="tag">Casual</span>
+          <span class="tag">Cotton</span>
+        </div>
+        <div class="price">$29</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" />
+      <div class="content">
+        <div class="title">Cotton Summer Shirt</div>
+        <div class="tags">
+          <span class="tag">Men</span>
+          <span class="tag">Casual</span>
+          <span class="tag">Cotton</span>
+        </div>
+        <div class="price">$29</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1542060748-10c28b62716d" />
+      <div class="content">
+        <div class="title">Stylish Denim Jacket</div>
+        <div class="tags">
+          <span class="tag">Women</span>
+          <span class="tag">Denim</span>
+          <span class="tag">Winter</span>
+        </div>
+        <div class="price">$48</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" />
+      <div class="content">
+        <div class="title">Kids Hoodie</div>
+        <div class="tags">
+          <span class="tag">Kids</span>
+          <span class="tag">Hoodie</span>
+        </div>
+        <div class="price">$22</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" />
+      <div class="content">
+        <div class="title">Sports Tracksuit</div>
+        <div class="tags">
+          <span class="tag">Men</span>
+          <span class="tag">Sports</span>
+        </div>
+        <div class="price">$35</div>
+      </div>
+    </div>
+
+  </div>
+  
+
+</section>
+
+<!-- footer -->
+ <!-- FOOTER START -->
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <!-- BRAND + DESCRIPTION -->
+        <div class="footer-brand">
+            <div class="brand-logo">
+                <img src="../image/logo.png" alt="brand">
+                
+            </div>
+
+            <p class="brand-text">
+                Best information about the company gies here but <br>
+                now lorem ipsum is
+            </p>
+
+            <div class="social-icons" aria-label="Social links">
+                <a href="#" aria-label="Facebook" class="social-link"><i class="ri-facebook-fill"></i></a>
+                <a href="#" aria-label="Twitter" class="social-link"><i class="ri-twitter-fill"></i></a>
+                <a href="#" aria-label="LinkedIn" class="social-link"><i class="ri-linkedin-box-fill"></i></a>
+                <a href="#" aria-label="Instagram" class="social-link"><i class="ri-instagram-fill"></i></a>
+                <a href="#" aria-label="YouTube" class="social-link"><i class="ri-youtube-fill"></i></a>
+            </div>
+        </div>
+
+        <!-- LINKS COLUMN 1 -->
+        <div class="footer-col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Find store</a>
+            <a href="#">Categories</a>
+            <a href="#">Blogs</a>
+        </div>
+
+        <!-- LINKS COLUMN 2 -->
+        <div class="footer-col">
+            <h4>Partnership</h4>
+            <a href="#">About Us</a>
+            <a href="#">Find store</a>
+            <a href="#">Categories</a>
+            <a href="#">Blogs</a>
+        </div>
+
+        <!-- LINKS COLUMN 3 -->
+        <div class="footer-col">
+            <h4>Information</h4>
+            <a href="#">Help Center</a>
+            <a href="#">Money Refund</a>
+            <a href="#">Shipping</a>
+            <a href="#">Contact us</a>
+        </div>
+
+        <!-- LINKS COLUMN 4 -->
+        <div class="footer-col">
+            <h4>For users</h4>
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+            <a href="#">Settings</a>
+            <a href="#">My Orders</a>
+        </div>
+
+        <!-- APP DOWNLOAD -->
+        <div class="footer-app">
+            <h4>Get app</h4>
+            <a href="#" class="app-btn app-store" aria-label="Download on Google Play">
+                <i class="ri-google-play-fill"></i>
+                <span>Google Play</span>
+            </a>
+            <a href="#" class="app-btn app-store" aria-label="Download on the App Store">
+                <i class="ri-apple-fill"></i>
+                <span>App Store</span>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2023 Ecommerce.</p>
+
+        <div class="footer-lang">
+            <button class="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
+                <img src="/flag/untiedstated.jpg" class="flag" alt="United States flag">
+                <span>English</span>
+                <i class="ri-arrow-down-s-line"></i>
+            </button>
+
+           
+        </div>
+    </div>  
+
+</footer>
+<!-- FOOTER END -->
+
+</body>
+</html>

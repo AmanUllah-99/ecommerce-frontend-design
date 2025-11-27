@@ -1,0 +1,41 @@
+
+/* =========================================================
+   SUPPLIERS BY REGION
+========================================================= */
+
+.suppliers-region {
+  width: 90%;
+  max-width: 1450px;
+  margin: 40px auto;
+}
+
+.suppliers-region h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+
+.region-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.region-item img {
+  width: 45px;
+}
+
+.region-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.region-link {
+  font-size: 14px;
+  color: #666;
+}

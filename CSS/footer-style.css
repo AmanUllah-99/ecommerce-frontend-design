@@ -1,0 +1,127 @@
+
+/* =========================================================
+   FOOTER SECTION
+========================================================= */
+
+/* footer */
+/* -------- FOOTER STYLES -------- */
+.footer {
+    background: #f6f7f9;
+    padding-top: 50px;
+    margin-top: 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-top {
+    width: 90%;
+    max-width: 1450px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+/* BRAND SECTION */
+.footer-brand .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.footer-brand .brand-logo img {
+    width: 120px;
+    /* background: #3b82ff; */
+    padding: px;
+    border-radius: 10px;
+}
+
+.footer-brand .brand-logo span {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.brand-text {
+    margin: 15px 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.social-icons span {
+    background: #dfe3e7;
+    padding: 13px;
+    margin-right: 10px;
+    display: inline-flex;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.social-icons img {
+    width: 18px;
+}
+
+
+/* FOOTER COLUMNS */
+.footer-col h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.footer-col a {
+    display: block;
+    text-decoration: none;
+    color: #444;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.footer-col a:hover {
+    color: #3b82ff;
+}
+
+/* APP STORE BUTTONS */
+.footer-app h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.app-btn {
+    width: 150px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+
+/* BOTTOM SECTION */
+.footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1450px;
+    margin: auto;
+    align-items: center;
+}
+
+.footer-bottom p {
+    color: #333;
+}
+
+/* LANGUAGE DROPDOWN */
+.footer-lang { position: relative; display: inline-block; }
+.lang-toggle { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: none; color: inherit; cursor: pointer; padding: 6px; }
+.lang-toggle .flag { width: 20px; height: 14px; object-fit: cover; border-radius: 2px; }
+.lang-toggle i { font-size: 18px; }
+.lang-list { position: absolute; right: 0; top: 100%; margin-top: 6px; background: #fff; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); list-style: none; padding: 6px 4px; min-width: 180px; display: none; max-height: 260px; overflow: auto; z-index: 1200; }
+.lang-list.show { display: block; }
+.lang-list li { display: flex; align-items: center; gap: 8px; padding: 8px 10px; cursor: pointer; color: #333; }
+.lang-list li:hover { background: #f5f5f5; }
+.lang-list li[aria-selected="true"] { background: #e9f5ff; }
+.lang-list .flag { width: 22px; height: 16px; object-fit: cover; border-radius: 2px; }
+
+@media (max-width: 480px) {
+  .lang-list { right: 0; left: 0; min-width: auto; }
+}

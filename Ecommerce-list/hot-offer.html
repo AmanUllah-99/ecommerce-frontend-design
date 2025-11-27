@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hot Offers</title>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+body{background:#f5f6f8;color:#333;}
+header{background:#fff;padding:18px 0;border-bottom:1px solid #e1e1e1;}
+.container{width:90%;max-width:1450px;margin:auto;}
+.flex{display:flex;align-items:center;}
+.space-between{justify-content:space-between;}
+.logo{font-size:24px;font-weight:700;color:#2d7cf6;display:flex;align-items:center;gap:8px;}
+nav{background:#fff;border-bottom:1px solid #e1e1e1;margin-top:5px;}
+nav ul{display:flex;gap:30px;list-style:none;padding:14px 0;font-size:15px;}
+
+.hero{margin-top:30px;background:#2d7cf6;color:white;padding:45px;border-radius:14px;display:flex;justify-content:space-between;align-items:center;}
+.hero h1{font-size:42px;max-width:400px;}
+.hero img{width:340px;}
+
+.section-title{font-size:24px;font-weight:700;margin:35px 0 15px;}
+.offer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+.card{background:white;border-radius:12px;border:1px solid #e1e1e1;padding:16px;transition:.3s;cursor:pointer;}
+.card:hover{box-shadow:0 4px 12px rgba(0,0,0,.08);} 
+.card img{width:100%;height:200px;object-fit:contain;border-radius:8px;}
+.price{font-size:22px;font-weight:700;margin:10px 0;color:#e60023;}
+.old{text-decoration:line-through;color:#999;margin-left:6px;font-size:14px;}
+.discount{background:#e60023;color:white;padding:4px 10px;font-size:13px;border-radius:4px;}
+.tag{background:#2d7cf6;color:white;padding:4px 8px;border-radius:4px;font-size:12px;}
+
+footer{background:#fff;padding:40px 0;margin-top:60px;border-top:1px solid #e1e1e1;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;}
+.footer-grid h4{margin-bottom:12px;font-size:16px;}
+
+@media(max-width:900px){
+.hero{flex-direction:column;text-align:center;gap:20px;}
+.hero img{width:260px;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container flex space-between">
+    <div class="logo"><i class="ri-fire-line"></i> Hot Offers</div>
+    <div class="flex" style="gap:22px;font-size:15px;">
+      <span>Profile</span>
+      <span>Messages</span>
+      <span>Orders</span>
+      <span>Cart</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <ul>
+      <li>All Deals</li>
+      <li>Flash Sale</li>
+      <li>Top Discount</li>
+      <li>Best Sellers</li>
+      <li>Coupons</li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container hero">
+  <h1>Super Hot Deals — Up to 70% OFF on top brands!</h1>
+  <img src="https://i.imgur.com/8Km9tLL.png" />
+</div>
+
+<div class="container">
+  <div class="section-title">Featured Hot Offers</div>
+  <div class="offer-grid">
+
+    <div class="card">
+      <img src="https://via.placeholder.com/260" />
+      <div class="price">$499 <span class="old">$899</span></div>
+      <span class="discount">-50%</span>
+      <p>Smartphone Pro Max 2023</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/260" />
+      <div class="price">$39 <span class="old">$99</span></div>
+      <span class="discount">-60%</span>
+      <p>Wireless Headphones</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/260" />
+      <div class="price">$699 <span class="old">$1299</span></div>
+      <span class="discount">-45%</span>
+      <p>Gaming Laptop Extreme 15"</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/260" />
+      <div class="price">$19 <span class="old">$49</span></div>
+      <span class="discount">-61%</span>
+      <p>USB‑C Fast Charger</p>
+    </div>
+
+  </div>
+
+
+  <div class="section-title">More Hot Deals</div>
+  <div class="offer-grid">
+
+    <div class="card">
+      <img src="https://via.placeholder.com/260" />
+      <div class="tag">Top Seller</div>
+      <div class="price">$299 <span class="old">$599</span></div>
+      <p>Smartwatch Ultra Sport</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/260" />
+      <div class="tag">Limited</div>
+      <div class="price">$89 <span class="old">$199</span></div>
+      <p>Bluetooth Speaker Bass+</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/260" />
+      <div class="tag">Hot</div>
+      <div class="price">$59 <span class="old">$99</span></div>
+      <p>Mechanical Keyboard</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/260" />
+      <div class="tag">Hot</div>
+      <div class="price">$149 <span class="old">$249</span></div>
+      <p>4K Action Camera</p>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4>Hot Offers</h4>
+      <p>Find the best discounts updated daily.</p>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <p>Help Center</p>
+      <p>Warranty</p>
+      <p>Contact Us</p>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <p>About</p>
+      <p>Careers</p>
+      <p>News</p>
+    </div>
+    <div>
+      <h4>Follow us</h4>
+      <p>Instagram</p>
+      <p>Facebook</p>
+      <p>Twitter</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

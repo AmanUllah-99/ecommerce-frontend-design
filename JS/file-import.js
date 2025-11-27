@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'suppliers', file: 'partial/suppliers.html' },
         { id: 'newsletter', file: 'partial/newsletter.html' },
         { id: 'footer', file: 'partial/footer.html' },
-        { id: 'mycart', file: 'partial/mycart.html' }
+        
     ];
 
     components.forEach(component => {

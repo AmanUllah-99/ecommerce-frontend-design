@@ -1,12 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cart — Clone</title>
+<style>
+  /* --- Reset & base --- */
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f1fbf8;
+    color:#21343a;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.45;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto}
+
+  /* --- container --- */
+  .page {
+    max-width:1180px;
+    margin:18px auto 60px;
+    padding:0 18px;
+  }
+
+  /* --- header --- */
+  header.top {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 0;
+  }
+  .brand {
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .brand .logo {
+    width:44px;height:44px;border-radius:10px;background:#3b82ff;
+    display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;
+  }
+  .brand .title {font-weight:700;color:#2b6b8a;font-size:20px}
+
+  .top-actions {display:flex;gap:22px;align-items:center;color:#8b9699;font-size:14px}
+  .top-actions span{display:inline-flex;align-items:center;gap:8px}
+
+  /* --- cart main layout --- */
+  .cart-row {display:grid;grid-template-columns:1fr 330px;gap:22px;margin-top:12px}
+
+  /* --- cart list --- */
+  .cart-box {
+    background:#fff;border-radius:8px;padding:18px;border:1px solid #e7eef0;
+    box-shadow:0 1px 0 rgba(30,60,70,0.02);
+  }
+  .cart-title {font-size:20px;font-weight:700;margin-bottom:14px}
+
+  .cart-item {
+    display:flex;gap:14px;padding:14px 6px;border-bottom:1px solid #eef5f4;
+    align-items:flex-start;
+  }
+  .cart-item:last-child{border-bottom:none}
+  .thumb {width:86px;height:86px;background:#f5f7f8;border-radius:6px;flex-shrink:0;overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:cover}
+
+  .item-content {flex:1}
+  .item-title {font-weight:700;color:#0f2b33;margin-bottom:6px}
+  .item-meta {font-size:13px;color:#7e8b8e;margin-bottom:10px}
+  .seller {font-size:13px;color:#5b6b6d;margin-bottom:8px}
+
+  .item-actions {display:flex;gap:10px;align-items:center;margin-top:6px}
+  .btn-link {background:transparent;border:1px solid transparent;color:#3b82ff;padding:6px 10px;border-radius:6px;font-size:13px;cursor:pointer}
+  .btn-link.secondary{color:#9aa9ad;border:1px solid #e6eef0;background:#fff}
+  .qty-select {width:90px;padding:8px;border-radius:6px;border:1px solid #e0e6e6;background:#fff}
+
+  .item-price {width:130px;text-align:right;font-weight:700}
+
+  /* small helpers for remove button etc */
+  .remove-btn {color:#d23a3a;background:transparent;border:none;cursor:pointer;font-size:13px;padding:6px}
+
+  /* --- summary panel --- */
+  .summary {
+    background:#fff;border-radius:8px;padding:18px;border:1px solid #e7eef0;position:sticky;top:18px;
+    height:fit-content;
+  }
+  .summary h3{font-size:18px;margin-bottom:12px}
+  .coupon {display:flex;gap:8px;margin-bottom:14px}
+  .coupon input{flex:1;padding:10px;border-radius:6px;border:1px solid #e1e7e8}
+  .coupon button{padding:10px 12px;border-radius:6px;background:#2f80ff;color:#fff;border:none;cursor:pointer}
+
+  .totals {font-size:15px;margin-top:10px}
+  .totals .row {display:flex;justify-content:space-between;padding:8px 0;color:#47595b}
+  .totals .row.total {font-weight:800;font-size:18px}
+  .checkout-btn{display:block;margin-top:12px;padding:12px;border-radius:10px;background:#0f9d58;color:#fff;text-align:center;border:none;cursor:pointer}
+
+  .payment-icons {display:flex;gap:8px;margin-top:12px;align-items:center}
+  .payment-icons img{height:22px;opacity:0.9}
+
+  /* --- small info row --- */
+  .info-row {display:flex;gap:18px;margin:22px 0;align-items:center}
+  .info-item {flex:1;background:#fff;padding:16px;border-radius:8px;border:1px solid #e8f0ef;text-align:center;color:#4a6b6d}
+  .info-item svg{height:28px;margin-bottom:8px;opacity:.8}
+
+  /* --- saved for later --- */
+  .saved {margin-top:18px}
+  .saved h4{font-weight:700;margin-bottom:12px}
+  .saved-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .product {background:#fff;border-radius:8px;padding:12px;border:1px solid #e7eef0;text-align:center}
+  .product .pimg{height:120px;background:#f6f8f9;border-radius:6px;overflow:hidden;margin-bottom:10px}
+  .product .pimg img{width:100%;height:100%;object-fit:cover}
+  .product .pprice{font-weight:700;margin:8px 0}
+  .product .pname{color:#6b7a7c;font-size:13px;margin-bottom:10px}
+  .product .pbtn{display:inline-block;padding:8px 10px;border-radius:6px;border:1px solid #e0e7e8;color:#2f80ff;font-weight:600;font-size:13px}
+
+  /* --- promo banner --- */
+  .promo {
+    margin-top:18px;padding:18px;border-radius:8px;background:linear-gradient(90deg,#2f80ff 0%,#1fb6ff 100%);
+    color:#fff;display:flex;align-items:center;justify-content:space-between;
+  }
+  .promo .text{font-weight:700;font-size:18px}
+  .promo .cta{padding:10px 14px;background:#ff9d2f;border-radius:8px;color:#fff;font-weight:700}
+
+  /* --- footer --- */
+  footer.sitefoot {margin-top:28px;padding:28px 0;border-top:1px solid #e7eef0;color:#6b7c7d}
+  footer .foot-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}
+  footer .brandcol{max-width:280px}
+  footer .links{display:flex;gap:28px}
+  footer .links .col h5{font-weight:700;margin-bottom:8px}
+  footer .links .col a{display:block;color:#6b7c7d;margin-bottom:6px;font-size:14px}
+
+  /* --- responsiveness --- */
+  @media (max-width: 980px){
+    .cart-row {grid-template-columns:1fr}
+    .saved-grid{grid-template-columns:repeat(2,1fr)}
+    .brand .title{font-size:18px}
+  }
+  @media (max-width: 560px){
+    .saved-grid{grid-template-columns:1fr}
+    .product .pimg{height:180px}
+    .top-actions {display:none}
+    header.top{padding:12px 0}
+    .promo{flex-direction:column;gap:12px;align-items:flex-start}
+  }
+</style>
 </head>
 <body>
-     <!-- MAIN: Cart + Summary -->
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="top">
+    <div class="brand">
+      <div class="logo">👜</div>
+      <div class="title">Brand</div>
+    </div>
+
+    <div class="top-actions">
+      <span>Profile</span>
+      <span>Message</span>
+      <span>Orders</span>
+      <span>My cart</span>
+    </div>
+  </header>
+
+  <!-- MAIN: Cart + Summary -->
   <div class="cart-row">
 
     <!-- LEFT: Cart items -->
@@ -179,5 +337,140 @@
     <div class="cta">Shop now</div>
   </div>
 
+  <!-- FOOTER -->
+  <footer class="sitefoot">
+    <div class="foot-inner">
+      <div class="brandcol">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#3b82ff;display:flex;align-items:center;justify-content:center;color:#fff">👜</div>
+          <div style="font-weight:700;color:#2b6b8a">Brand</div>
+        </div>
+        <div style="color:#6b7c7d;font-size:14px;margin-bottom:12px">Best information about the company gies here but now lorem ipsum is</div>
+        <div style="display:flex;gap:10px">
+          <div style="width:36px;height:36px;border-radius:50%;background:#e6edf0"></div>
+          <div style="width:36px;height:36px;border-radius:50%;background:#e6edf0"></div>
+          <div style="width:36px;height:36px;border-radius:50%;background:#e6edf0"></div>
+          <div style="width:36px;height:36px;border-radius:50%;background:#e6edf0"></div>
+        </div>
+      </div>
+
+      <div class="links">
+        <div class="col">
+          <h5>About</h5>
+          <a>About Us</a><a>Find store</a><a>Categories</a><a>Blogs</a>
+        </div>
+        <div class="col">
+          <h5>Partnership</h5>
+          <a>About Us</a><a>Find store</a><a>Categories</a><a>Blogs</a>
+        </div>
+        <div class="col">
+          <h5>Information</h5>
+          <a>Help Center</a><a>Money Refund</a><a>Shipping</a><a>Contact us</a>
+        </div>
+        <div class="col">
+          <h5>For users</h5>
+          <a>Login</a><a>Register</a><a>Settings</a><a>My Orders</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:22px;border-top:1px solid #e7eef0;padding-top:16px;display:flex;justify-content:space-between;align-items:center">
+      <div>© 2023 Ecommerce.</div>
+      <div style="background:#fff;padding:8px 12px;border-radius:8px;border:1px solid #e8eef0;display:flex;align-items:center;gap:8px"><img src="https://picsum.photos/seed/flag/20/14" alt="">English ▾</div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // --- small JS to calculate totals, coupon apply, remove items, qty change ---
+  (function(){
+    const cartItems = Array.from(document.querySelectorAll('.cart-item'));
+    const subtotalEl = document.getElementById('subtotal');
+    const discountEl = document.getElementById('discount');
+    const taxEl = document.getElementById('tax');
+    const totalEl = document.getElementById('total');
+    const cartCountEl = document.getElementById('cartCount');
+    const applyBtn = document.getElementById('applyCoupon');
+    const couponInput = document.getElementById('couponInput');
+
+    let discount = 0;
+    const TAX_RATE = 0.01; // small tax for demo
+
+    function parsePrice(str){
+      return Number(String(str).replace(/[^0-9.-]+/g,""))||0;
+    }
+
+    function calc(){
+      const items = Array.from(document.querySelectorAll('.cart-item'));
+      let subtotal = 0;
+      items.forEach(it=>{
+        const base = parseFloat(it.getAttribute('data-price')||0);
+        const qty = parseInt(it.querySelector('[data-qty]').value||1,10);
+        subtotal += base * qty;
+      });
+      let tax = +(subtotal * TAX_RATE).toFixed(2);
+      let total = +(subtotal - discount + tax).toFixed(2);
+
+      subtotalEl.textContent = '$' + subtotal.toFixed(2);
+      discountEl.textContent = '-$' + discount.toFixed(2);
+      taxEl.textContent = '+$' + tax.toFixed(2);
+      totalEl.textContent = '$' + total.toFixed(2);
+      cartCountEl.textContent = document.querySelectorAll('.cart-item').length;
+    }
+
+    // initial calc
+    calc();
+
+    // qty change
+    document.querySelectorAll('.qty-select').forEach(sel=>{
+      sel.addEventListener('change', function(){
+        calc();
+      });
+    });
+
+    // remove item
+    document.querySelectorAll('[data-remove]').forEach(btn=>{
+      btn.addEventListener('click', function(e){
+        const item = e.target.closest('.cart-item');
+        if(!item) return;
+        item.parentNode.removeChild(item);
+        calc();
+      });
+    });
+
+    // remove all
+    document.getElementById('removeAll').addEventListener('click', function(){
+      document.querySelectorAll('.cart-item').forEach(it=>it.remove());
+      calc();
+    });
+
+    // apply coupon (demo: 'SAVE60' gives $60 discount)
+    applyBtn.addEventListener('click', function(){
+      const code = (couponInput.value || '').trim().toUpperCase();
+      if(!code){ alert('Enter coupon code'); return; }
+      if(code === 'SAVE60'){ discount = 60; alert('Coupon applied: -$60'); }
+      else if(code === 'DIS10'){ discount = 10; alert('Coupon applied: -$10'); }
+      else { discount = 0; alert('Invalid coupon'); }
+      calc();
+    });
+
+    // checkout (demo)
+    document.getElementById('checkout').addEventListener('click', function(){
+      alert('Checkout clicked — integrate with payment gateway in real project.');
+    });
+
+    // Move saved->cart (demo)
+    document.querySelectorAll('.pbtn').forEach(btn=>{
+      btn.addEventListener('click', function(e){
+        alert('Moved to cart (demo). Implement proper data flow for production.');
+      });
+    });
+
+    // back to shop
+    document.getElementById('backToShop').addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+
+  })();
+</script>
 </body>
 </html>
