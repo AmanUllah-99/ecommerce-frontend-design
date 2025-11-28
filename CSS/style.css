@@ -998,5 +998,204 @@ body {
         width: 100%;
         margin-bottom: 8px;
     }
-    
+}
+
+/* =========================================================
+   MOBILE-FIRST RESPONSIVE UTILITIES
+========================================================= */
+
+/* Containers */
+.container {
+    width: 90%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* Flexible Grid Helper - Auto-fit for responsive cards */
+.grid-auto {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Text Responsiveness with Viewport Units */
+@media (max-width: 768px) {
+    h1 { font-size: calc(1.5rem + 1vw); }
+    h2 { font-size: calc(1.3rem + 0.8vw); }
+    h3 { font-size: calc(1.1rem + 0.5vw); }
+    p { font-size: calc(0.9rem + 0.2vw); }
+}
+
+/* Flex Responsive - Wraps items responsively */
+.flex-responsive {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .flex-responsive > * {
+        flex: 1 1 calc(50% - 8px);
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-responsive > * {
+        flex: 1 1 100%;
+    }
+}
+
+/* Spacing Helpers with Clamp for fluid spacing */
+.spacing-responsive {
+    padding: clamp(15px, 5vw, 40px);
+    margin: clamp(10px, 3vw, 30px);
+}
+
+/* Touch-Friendly Interactive Elements */
+button, a.btn, input, select, textarea {
+    min-height: 44px;
+}
+
+@media (max-width: 480px) {
+    button, a.btn {
+        padding: 14px 20px;
+        font-size: 16px; /* prevents zoom on iOS Safari */
+        min-height: 48px;
+    }
+    input, select, textarea {
+        font-size: 16px; /* prevents zoom */
+    }
+}
+
+/* Navigation Responsive */
+.nav-responsive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .nav-responsive {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+}
+
+/* Cards Grid - Auto-responsive */
+.cards-grid {
+    display: grid;
+    gap: 20px;
+    grid-auto-flow: dense;
+}
+
+@media (min-width: 1200px) {
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 479px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 10px 8px;
+    }
+}
+
+/* Hide/Show Classes */
+.hide-mobile { display: none; }
+.hide-desktop { display: block; }
+
+@media (min-width: 768px) {
+    .hide-mobile { display: block; }
+    .hide-desktop { display: none; }
+}
+
+/* Aspect Ratio Container */
+.aspect-ratio {
+    position: relative;
+    overflow: hidden;
+}
+
+.aspect-ratio--16x9 {
+    padding-bottom: 56.25%;
+}
+
+.aspect-ratio--4x3 {
+    padding-bottom: 75%;
+}
+
+.aspect-ratio--1x1 {
+    padding-bottom: 100%;
+}
+
+.aspect-ratio__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Typography Scale */
+@media (min-width: 1200px) {
+    :root {
+        --font-size-base: 16px;
+        --font-size-lg: 18px;
+        --font-size-xl: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    :root {
+        --font-size-base: 15px;
+        --font-size-lg: 17px;
+        --font-size-xl: 19px;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --font-size-base: 14px;
+        --font-size-lg: 16px;
+        --font-size-xl: 18px;
+    }
 }

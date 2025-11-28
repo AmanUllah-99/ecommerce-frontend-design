@@ -54,3 +54,115 @@
 .service-icon img {
   width: 20px;
 }
+
+/* =========================================================
+   RESPONSIVE SERVICE GRID
+========================================================= */
+
+/* Large Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .service-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+}
+
+/* Standard Desktop (1024px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .service-card img {
+    height: 150px;
+  }
+  .extra-services h2 {
+    font-size: 24px;
+  }
+}
+
+/* Small Tablet (600px - 767px) */
+@media (max-width: 767px) and (min-width: 600px) {
+  .extra-services {
+    width: 95%;
+    margin: 25px auto;
+  }
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .service-card img {
+    height: 140px;
+  }
+  .service-info {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .extra-services h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Mobile (480px - 599px) */
+@media (max-width: 599px) and (min-width: 480px) {
+  .extra-services {
+    width: 95%;
+    margin: 20px auto;
+  }
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .service-card img {
+    height: 180px;
+  }
+  .service-info {
+    font-size: 15px;
+    padding: 12px;
+  }
+  .extra-services h2 {
+    font-size: 20px;
+  }
+}
+
+/* Small Mobile (320px - 479px) */
+@media (max-width: 479px) {
+  .extra-services {
+    width: 95%;
+    margin: 15px auto;
+    padding: 0 8px;
+  }
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .service-card {
+    border-radius: 8px;
+  }
+  .service-card img {
+    height: 160px;
+  }
+  .service-info {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .service-icon {
+    padding: 10px;
+  }
+  .service-icon img {
+    width: 18px;
+  }
+  .extra-services h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
